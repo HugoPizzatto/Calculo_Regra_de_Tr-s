@@ -1,0 +1,1 @@
+# Calculo_Regra_de_Tr-s
