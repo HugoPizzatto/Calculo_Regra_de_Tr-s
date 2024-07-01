@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regra de 3!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flex-wrapper">
+
+        <div class="header">
+            <h1>Calculadora de Regra de Três</h1>
+        </div>
+        <div class="content">
+            <div class="inputs">
+                <input type="number" name="n1" id="n1">
+                <input type="number" name="n2" id="n2">
+            </div>
+            <div class="inputs">
+                <input type="number" name="n3" id="n3">
+                <div id="resultado"><p></p></div>
+            </div>
+            <input type="button" value="calcular" id="calcular" onclick="calcular()">
+
+            <div class="texto_explicativo">
+                <p>O site a seguir foi projetado para um estudo inicial de JavaScript, o mesmo utiliza um script simples para o calculo da <strong>"Regra de Três"</strong>, famosa e útil formula matemática.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <footer>
+                made by Hugo Pizzatto
+            </footer>
+        </div>
+    </div>
+    <script>
+        function calcular(){
+            var n1 = Number(document.getElementById('n1').value);
+            var n2 = Number(document.getElementById('n2').value);
+            var n3 = Number(document.getElementById('n3').value);
+            var res = Number(n2 * n3) / n1;
+            var resposta = document.getElementById('resultado');
+            resposta.innerText = res;
+        }
+    </script>
+</body>
+</html>
